@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Olaf</title>
-    <script src="phaser.min.js"></script>
+    <script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"></script>
 
     <style type="text/css">
         body {
@@ -16,6 +16,8 @@
 <script type="text/javascript">
 
 var game = new Phaser.Game(1024, 768, Phaser.AUTO, 'La Storia di Olaf', { preload: preload, create: create, update: update, render: render });
+
+
 
 function preload() {
 
@@ -35,99 +37,99 @@ function preload() {
     game.load.audio('muromattoni', 'sound effects/muromattoni.wav');
 
 
-    game.load.image('numero_vita_5', '/assets/x5.png',95,62);
-    game.load.image('numero_vita_4', '/assets/x4.png',95,62);
-    game.load.image('numero_vita_3', '/assets/x3.png',95,62);
-    game.load.image('numero_vita_2', '/assets/x2.png',95,62);
-    game.load.image('numero_vita_1', '/assets/x1.png',95,62);
-    game.load.image('numero_vita_0', '/assets/x0.png',95,62);
-    game.load.spritesheet('bottone_uscita_gioco', '/assets/tastohome.png', 960,560);
+    game.load.image('numero_vita_5', 'assets/x5.png',95,62);
+    game.load.image('numero_vita_4', 'assets/x4.png',95,62);
+    game.load.image('numero_vita_3', 'assets/x3.png',95,62);
+    game.load.image('numero_vita_2', 'assets/x2.png',95,62);
+    game.load.image('numero_vita_1', 'assets/x1.png',95,62);
+    game.load.image('numero_vita_0', 'assets/x0.png',95,62);
+    game.load.spritesheet('bottone_uscita_gioco', 'assets/tastohome.png', 960,560);
 
     //Sfondi primo livello
-    game.load.image('livello1_a', '/assets/Cielo_def_def.png');
-    game.load.image('livello1_b', '/assets/Montagne.png');
-    game.load.image('livello1_c', '/assets/Montagne Piccola.png');
-    game.load.image('livello1_d', '/assets/Colline_1.png');
-    game.load.image('nebbia', '/assets/nebbia_def.png');
+    game.load.image('livello1_a', 'assets/Cielo_def_def.png');
+    game.load.image('livello1_b', 'assets/Montagne.png');
+    game.load.image('livello1_c', 'assets/Montagne Piccola.png');
+    game.load.image('livello1_d', 'assets/Colline_1.png');
+    game.load.image('nebbia', 'assets/nebbia_def.png');
 
     //Sfondi secondo e terzo livello
-    game.load.image('livello2_a', '/assets/Sfondo con finestre_def.png');
-    game.load.image('livello2_b', '/assets/Colonnato in secondo piano_def.png');
-    game.load.image('livello3_a', '/assets/Sfondo grigio terzo livello.png');
-    game.load.image('livello3_b1', '/assets/Colonnato ombreggiato.png');
-    game.load.image('livello3_b', '/assets/Colonnato fermo.png');
-    game.load.image('livello2_c', '/assets/Colonnato in primo piano_nuovo.png');
-    game.load.image('ponte_levatoio', '/assets/ponte.png');
-    game.load.image('catena', '/assets/Catena_def.png');
+    game.load.image('livello2_a', 'assets/Sfondo con finestre_def.png');
+    game.load.image('livello2_b', 'assets/Colonnato in secondo piano_def.png');
+    game.load.image('livello3_a', 'assets/Sfondo grigio terzo livello.png');
+    game.load.image('livello3_b1', 'assets/Colonnato ombreggiato.png');
+    game.load.image('livello3_b', 'assets/Colonnato fermo.png');
+    game.load.image('livello2_c', 'assets/Colonnato in primo piano_nuovo.png');
+    game.load.image('ponte_levatoio', 'assets/ponte.png');
+    game.load.image('catena', 'assets/Catena_def.png');
 
     //Piattaforme primo livello
-    game.load.image('piattfo1', '/assets/Prima Piattaforma.png');
-    game.load.image('piattfo2', '/assets/Seconda Piattaforma.png');
-    game.load.image('piattfo3', '/assets/Terza Piattaforma.png');
-    game.load.image('piattfo4', '/assets/Quarta Piattaforma.png');
-    game.load.image('piattfo5', '/assets/Quinta Piattaforma.png');
+    game.load.image('piattfo1', 'assets/Prima Piattaforma.png');
+    game.load.image('piattfo2', 'assets/Seconda Piattaforma.png');
+    game.load.image('piattfo3', 'assets/Terza Piattaforma.png');
+    game.load.image('piattfo4', 'assets/Quarta Piattaforma.png');
+    game.load.image('piattfo5', 'assets/Quinta Piattaforma.png');
     //Piattaforme secondo e terzo livello
-    game.load.image('piattfo6', '/assets/a_tavola.png');
-    game.load.image('piattfo7', '/assets/b_tavola.png');
-    game.load.image('piattfo8', '/assets/c_tavola.png');
-    game.load.image('piattfo9', '/assets/d_tavola.png');
-    game.load.image('piattfo10', '/assets/e_tavola.png');
-    game.load.image('piattfo11', '/assets/e_tavola.png');
+    game.load.image('piattfo6', 'assets/a_tavola.png');
+    game.load.image('piattfo7', 'assets/b_tavola.png');
+    game.load.image('piattfo8', 'assets/c_tavola.png');
+    game.load.image('piattfo9', 'assets/d_tavola.png');
+    game.load.image('piattfo10', 'assets/e_tavola.png');
+    game.load.image('piattfo11', 'assets/e_tavola.png');
 
     //Trono
-    game.load.image('trono_sotto', '/assets/Parte Sotto Trono con Cuscino.png');
-    game.load.image('trono_sopra', '/assets/Parte Sopra Trono con Cuscino.png');
+    game.load.image('trono_sotto', 'assets/Parte Sotto Trono con Cuscino.png');
+    game.load.image('trono_sopra', 'assets/Parte Sopra Trono con Cuscino.png');
 
     //Piattaforme trasparenti primo livello
-    game.load.image('ground1', '/assets/Piattaforma-Base-1.png');
-    game.load.image('ground2', '/assets/Seconda-Piattaforma-Base.png');
-    game.load.image('ground3', '/assets/Terza-Piattaforma-Base.png');
-    game.load.image('ground4', '/assets/Querta-Piattaforma-Base.png');
-    game.load.image('ground5', '/assets/Quinta-Piattaforma-Base.png');
+    game.load.image('ground1', 'assets/Piattaforma-Base-1.png');
+    game.load.image('ground2', 'assets/Seconda-Piattaforma-Base.png');
+    game.load.image('ground3', 'assets/Terza-Piattaforma-Base.png');
+    game.load.image('ground4', 'assets/Querta-Piattaforma-Base.png');
+    game.load.image('ground5', 'assets/Quinta-Piattaforma-Base.png');
     //Piattaforme trasparenti secondo e terzo livello
-    game.load.image('ground6', '/assets/Piattaforma1SecondoLivello.png');
-    game.load.image('ground7', '/assets/Piattaforma2SecondoLivello.png');
-    game.load.image('ground8', '/assets/Piattaforma3SecondoLivello.png');
-    game.load.image('ground9', '/assets/Piattaforma4SecondoLivello.png');
-    game.load.image('ground10', '/assets/Piattaforma5SecondoLivello.png');
-    game.load.image('ground11', '/assets/Piattaforma5SecondoLivello.png');
+    game.load.image('ground6', 'assets/Piattaforma1SecondoLivello.png');
+    game.load.image('ground7', 'assets/Piattaforma2SecondoLivello.png');
+    game.load.image('ground8', 'assets/Piattaforma3SecondoLivello.png');
+    game.load.image('ground9', 'assets/Piattaforma4SecondoLivello.png');
+    game.load.image('ground10', 'assets/Piattaforma5SecondoLivello.png');
+    game.load.image('ground11', 'assets/Piattaforma5SecondoLivello.png');
     //Piattaforme volanti
-    game.load.image('sospesa3_f', '/assets/Piattaforma volante terzo livello.png');
-    game.load.image('sospesa2_f', '/assets/Piattaforma di pietra.png');
-    game.load.image('sospesa_f', '/assets/Piattaforma Fissa Livello 1.png');
-    game.load.spritesheet('sospesa_m', '/assets/Piattaforma terra.png', 253, 79);
-    game.load.spritesheet('sospesa2_m', '/assets/Piattaforma cemento.png', 253, 79);
+    game.load.image('sospesa3_f', 'assets/Piattaforma volante terzo livello.png');
+    game.load.image('sospesa2_f', 'assets/Piattaforma di pietra.png');
+    game.load.image('sospesa_f', 'assets/Piattaforma Fissa Livello 1.png');
+    game.load.spritesheet('sospesa_m', 'assets/Piattaforma terra.png', 253, 79);
+    game.load.spritesheet('sospesa2_m', 'assets/Piattaforma cemento.png', 253, 79);
 
-    game.load.image('mattone', '/assets/mattone-nuovo.png');
-    game.load.image('muro','/assets/stop.png');
+    game.load.image('mattone', 'assets/mattone-nuovo.png');
+    game.load.image('muro','assets/stop.png');
 
-    game.load.image('neve','/assets/palla.png');
-    game.load.image('proiettile_elsa','/assets/Proiettile elsa_def.png');
-    game.load.image('cubetto_ghiaccio','/assets/ice.png');
-    game.load.image('bullets', '/assets/Fiocco-di-neve-singolo-bagliore-nero-54x58.png');
-    game.load.spritesheet('fiocco', '/assets/Fiocco-di-Neve-con-bagliore-bianco.png', 150, 170);
-    //game.load.spritesheet('ciapa', '/assets/Fiocco di Neve Animazione.png', 150, 170);
+    game.load.image('neve','assets/palla.png');
+    game.load.image('proiettile_elsa','assets/Proiettile elsa_def.png');
+    game.load.image('cubetto_ghiaccio','assets/ice.png');
+    game.load.image('bullets', 'assets/Fiocco-di-neve-singolo-bagliore-nero-54x58.png');
+    game.load.spritesheet('fiocco', 'assets/Fiocco-di-Neve-con-bagliore-bianco.png', 150, 170);
+    //game.load.spritesheet('ciapa', 'assets/Fiocco di Neve Animazione.png', 150, 170);
 
-    game.load.spritesheet('vita', '/assets/Barra-di-scioglimento-232x24-no-spazio.png', 232, 24);
-    game.load.spritesheet('olaf', '/assets/olaf64x120copiaa.png', 64, 120);
-    game.load.spritesheet('elsa', '/assets/elsa giusta.png', 54, 141);
-    game.load.spritesheet('nemico','/assets/Guardia.png', 90, 150);
-    game.load.spritesheet('check-point','/assets/Bandierina-azzurrina-110x226.png', 110, 226);
+    game.load.spritesheet('vita', 'assets/Barra-di-scioglimento-232x24-no-spazio.png', 232, 24);
+    game.load.spritesheet('olaf', 'assets/olaf64x120copiaa.png', 64, 120);
+    game.load.spritesheet('elsa', 'assets/elsa giusta.png', 54, 141);
+    game.load.spritesheet('nemico','assets/Guardia.png', 90, 150);
+    game.load.spritesheet('check-point','assets/Bandierina-azzurrina-110x226.png', 110, 226);
 
-    game.load.spritesheet('lampadario','/assets/Lampadario190x165.png', 190, 165);
-    game.load.spritesheet('lampadario_cadente','/assets/Stalattite.png',143,176);
-    game.load.image('rovi', '/assets/Rovo 101x51.png');
-    game.load.image('spuntoni', '/assets/Spuntoni Dentati.png');
-    game.load.spritesheet('torcia', '/assets/Torcia-140x160.png', 140, 160);
-    game.load.spritesheet('acqua_onde', '/assets/onde con pezzetti.png',1024,101);
-    game.load.spritesheet('tastoinfo1', '/assets/tastoinfo1_def.png',195,95);
-    game.load.spritesheet('tastoinfo2', '/assets/tastoinfo2_def.png',317,80);
-    game.load.spritesheet('tastoinfo3', '/assets/tastoinfo3_def.png',90,84);
-    game.load.spritesheet('tastoinfo4', '/assets/tastoinfo4_def.png',84,84);
+    game.load.spritesheet('lampadario','assets/Lampadario190x165.png', 190, 165);
+    game.load.spritesheet('lampadario_cadente','assets/Stalattite.png',143,176);
+    game.load.image('rovi', 'assets/Rovo 101x51.png');
+    game.load.image('spuntoni', 'assets/Spuntoni Dentati.png');
+    game.load.spritesheet('torcia', 'assets/Torcia-140x160.png', 140, 160);
+    game.load.spritesheet('acqua_onde', 'assets/onde con pezzetti.png',1024,101);
+    game.load.spritesheet('tastoinfo1', 'assets/tastoinfo1_def.png',195,95);
+    game.load.spritesheet('tastoinfo2', 'assets/tastoinfo2_def.png',317,80);
+    game.load.spritesheet('tastoinfo3', 'assets/tastoinfo3_def.png',90,84);
+    game.load.spritesheet('tastoinfo4', 'assets/tastoinfo4_def.png',84,84);
 
-    game.load.image('icona_olaf', '/assets/Mini Olaf.png',45,96);
-    game.load.image('icona_elsa', '/assets/Elsa-mini.png',45,96);
-    game.load.image('corona', '/assets/corona bagliore.png',100,82);
+    game.load.image('icona_olaf', 'assets/Mini Olaf.png',45,96);
+    game.load.image('icona_elsa', 'assets/Elsa-mini.png',45,96);
+    game.load.image('corona', 'assets/corona bagliore.png',100,82);
 }
 
 
@@ -203,7 +205,7 @@ function preload() {
     var muro;
     var trono_sotto;
     var trono_sopra;
-    var url_exit = 'home.html';
+    var url_exit = 'index.html';
     var url_gameover = 'sconfitta.html';
     var url_endgame = 'vittoria.html';
     var icona_vita_olaf;
