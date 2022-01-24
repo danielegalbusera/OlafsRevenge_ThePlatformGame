@@ -1,30 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <title>Olaf</title>
-	<link rel="icon" href="Immagini_def/Favicon 16x16.png" type="image/png" />
-
-    <script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"></script>
-
-    <style type="text/css">
-
-        body {margin: 0px auto;
-			  background-image: url("Immagini_def/Pattern.png");
-			  background-size: cover;
-		      overflow: auto;
-			  }
-    </style>
-</head>
-<body>
-
-<script type="text/javascript">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Olaf</title>
-    <script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"></script>
+    <script src="phaser.min.js"></script>
 
     <style type="text/css">
         body {
@@ -58,44 +38,44 @@ function preload() {
     game.load.audio('muromattoni', 'sound effects/muromattoni.wav');
 
 
-    game.load.image('numero_vita_5', './assets/x5.png',95,62);
-    game.load.image('numero_vita_4', './assets/x4.png',95,62);
-    game.load.image('numero_vita_3', './assets/x3.png',95,62);
-    game.load.image('numero_vita_2', './assets/x2.png',95,62);
-    game.load.image('numero_vita_1', './assets/x1.png',95,62);
-    game.load.image('numero_vita_0', './assets/x0.png',95,62);
-    game.load.spritesheet('bottone_uscita_gioco', './assets/tastohome.png', 960,560);
+    game.load.image('numero_vita_5', 'assets/x5.png',95,62);
+    game.load.image('numero_vita_4', 'assets/x4.png',95,62);
+    game.load.image('numero_vita_3', 'assets/x3.png',95,62);
+    game.load.image('numero_vita_2', 'assets/x2.png',95,62);
+    game.load.image('numero_vita_1', 'assets/x1.png',95,62);
+    game.load.image('numero_vita_0', 'assets/x0.png',95,62);
+    game.load.spritesheet('bottone_uscita_gioco', 'assets/tastohome.png', 960,560);
 
     //Sfondi primo livello
-    game.load.image('livello1_a', './assets/Cielo_def_def.png');
-    game.load.image('livello1_b', './assets/Montagne.png');
-    game.load.image('livello1_c', './assets/Montagne Piccola.png');
-    game.load.image('livello1_d', './assets/Colline_1.png');
-    game.load.image('nebbia', './assets/nebbia_def.png');
+    game.load.image('livello1_a', 'assets/Cielo_def_def.png');
+    game.load.image('livello1_b', 'assets/Montagne.png');
+    game.load.image('livello1_c', 'assets/Montagne Piccola.png');
+    game.load.image('livello1_d', 'assets/Colline_1.png');
+    game.load.image('nebbia', 'assets/nebbia_def.png');
 
     //Sfondi secondo e terzo livello
-    game.load.image('livello2_a', './assets/Sfondo con finestre_def.png');
-    game.load.image('livello2_b', './assets/Colonnato in secondo piano_def.png');
-    game.load.image('livello3_a', './assets/Sfondo grigio terzo livello.png');
-    game.load.image('livello3_b1', './assets/Colonnato ombreggiato.png');
-    game.load.image('livello3_b', './assets/Colonnato fermo.png');
-    game.load.image('livello2_c', './assets/Colonnato in primo piano_nuovo.png');
-    game.load.image('ponte_levatoio', './assets/ponte.png');
-    game.load.image('catena', './assets/Catena_def.png');
+    game.load.image('livello2_a', 'assets/Sfondo con finestre_def.png');
+    game.load.image('livello2_b', 'assets/Colonnato in secondo piano_def.png');
+    game.load.image('livello3_a', 'assets/Sfondo grigio terzo livello.png');
+    game.load.image('livello3_b1', 'assets/Colonnato ombreggiato.png');
+    game.load.image('livello3_b', 'assets/Colonnato fermo.png');
+    game.load.image('livello2_c', 'assets/Colonnato in primo piano_nuovo.png');
+    game.load.image('ponte_levatoio', 'assets/ponte.png');
+    game.load.image('catena', 'assets/Catena_def.png');
 
     //Piattaforme primo livello
-    game.load.image('piattfo1', './assets/Prima Piattaforma.png');
-    game.load.image('piattfo2', './assets/Seconda Piattaforma.png');
-    game.load.image('piattfo3', './assets/Terza Piattaforma.png');
-    game.load.image('piattfo4', './assets/Quarta Piattaforma.png');
-    game.load.image('piattfo5', './assets/Quinta Piattaforma.png');
+    game.load.image('piattfo1', 'assets/Prima Piattaforma.png');
+    game.load.image('piattfo2', 'assets/Seconda Piattaforma.png');
+    game.load.image('piattfo3', 'assets/Terza Piattaforma.png');
+    game.load.image('piattfo4', 'assets/Quarta Piattaforma.png');
+    game.load.image('piattfo5', 'assets/Quinta Piattaforma.png');
     //Piattaforme secondo e terzo livello
-    game.load.image('piattfo6', './assets/a_tavola.png');
-    game.load.image('piattfo7', './assets/b_tavola.png');
-    game.load.image('piattfo8', './assets/c_tavola.png');
-    game.load.image('piattfo9', './assets/d_tavola.png');
-    game.load.image('piattfo10', './assets/e_tavola.png');
-    game.load.image('piattfo11', './assets/e_tavola.png');
+    game.load.image('piattfo6', 'assets/a_tavola.png');
+    game.load.image('piattfo7', 'assets/b_tavola.png');
+    game.load.image('piattfo8', 'assets/c_tavola.png');
+    game.load.image('piattfo9', 'assets/d_tavola.png');
+    game.load.image('piattfo10', 'assets/e_tavola.png');
+    game.load.image('piattfo11', 'assets/e_tavola.png');
 
     //Trono
     game.load.image('trono_sotto', './assets/Parte Sotto Trono con Cuscino.png');
